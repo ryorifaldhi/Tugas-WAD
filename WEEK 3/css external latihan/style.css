@@ -1,0 +1,28 @@
+/* Gaya untuk elemen <body> */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya untuk elemen <h1> (Judul utama) */
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+/* Gaya untuk elemen <h2> (Subjudul) */
+h2 {
+    color: #666;
+    font-size: 24px;
+}
+
+/* Gaya untuk elemen <p> (Paragraf) */
+p {
+    color: #444;
+    font-size: 18px;
+    margin: 20px 0;
+}
