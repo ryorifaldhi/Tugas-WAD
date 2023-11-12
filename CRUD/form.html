@@ -1,0 +1,55 @@
+<!-- index.php -->
+
+<html>
+<head>
+
+<!-- CSS internal -->
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <!-- Navbar menu -->
+  </div>
+
+  <h1>Data Barang</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Barang</th>
+        <th>Jumlah</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <?php
+      // Koneksi database
+      $conn = mysqli_connect("localhost","root","", "db_toko");
+
+      // Query ambil data barang
+      $result = mysqli_query($conn, "SELECT * FROM barang");
+
+      while($row = mysqli_fetch_array($result)) {
+    ?>
+      <tr>
+        <td><?php echo $row['nama']; ?></td>
+        <td><?php echo $row['jumlah']; ?></td>
+        <td>
+          <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a> |
+          <a href="delete.php?id=<?php echo $row['id']; ?>">Hapus</a> 
+        </td>
+      </tr>
+    <?php
+      }
+    ?>
+    
+    </tbody>
+  </table>
+
+  <a href="tambah.php">Tambah Data Barang</a>
+
+</body>
+</html>
